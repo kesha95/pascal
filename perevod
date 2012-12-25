@@ -1,5 +1,5 @@
 Program perevod;   {Из десятичной сс в сс с основанием <9}
-
+ //copy
 var
 a,b:string;
 osn,chisl:integer;
