@@ -1,12 +1,15 @@
 Program perevod;   {Из десятичной сс в сс с основанием <9}
+
 var
 a,b:string;
 osn,chisl:integer;
+
 begin
 write('Введите число в 10 сс: ');
 readln(chisl);
 write('Введите основание сс: ');
 readln(osn);
+
 if osn<=9 then
 begin
 while chisl>0 do
