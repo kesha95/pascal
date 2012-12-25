@@ -1,0 +1,36 @@
+Program perevod_2;  {Из сс с основанием <9 в десятичную сс}
+
+var
+s,k,osn,osn1,chisl:integer;
+
+begin
+write('Введите число: ');
+readln(chisl);
+write('Введите основание сс: ');
+readln(osn);
+s:=0;
+k:=0;
+
+if osn<=9 then
+begin
+osn1:=1;
+while chisl>0 do
+  begin
+  k:=chisl mod 10;
+  if k<osn then
+    begin
+    s:=s+k*osn1;
+    osn1:=osn1*osn;
+    chisl:=chisl div 10;
+    end
+  else
+    begin
+    writeln('Заданное число не может быть в этой сс');
+    exit;
+    end;
+  end;
+writeln('Результат: ',s);
+end
+else
+writeln('Основание должно быть меньше 9');
+end.
